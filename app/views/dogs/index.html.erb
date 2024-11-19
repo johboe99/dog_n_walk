@@ -1,0 +1,10 @@
+<div class="container">
+  <% @dogs.each do |dog| %>
+    <div class="card bg-white my-3 px-3 py-3">
+      <h2><%= dog.name%></h2>
+      <p><%= dog.breed %>, <%= dog.age %> years old</p>
+      <p><%= dog.description %></p>
+      <button class= "btn btn-primary mb-3">Go on a walk with me!</button>
+    </div>
+  <% end %>
+</div>
