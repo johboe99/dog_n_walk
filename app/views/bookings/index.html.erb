@@ -1,0 +1,9 @@
+<div class="container">
+  <% @bookings.each do |booking| %>
+    <div class="card bg-white my-3 px-3 py-3">
+      <h2><%= booking.user.first_name%> <%= booking.user.last_name%> <%= booking.date%></h2>
+      <p><%= booking.dog.name %>, <%= booking.dog.age %> years old</p>
+      <p><%= booking.dog.description %></p>
+    </div>
+  <% end %>
+</div>
