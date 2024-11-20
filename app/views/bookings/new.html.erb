@@ -1,0 +1,6 @@
+<h1>When will you take this Dog on a walk?</h1>
+
+<%= simple_form_for([@dog, @booking]) do |f| %>
+  <%= f.input :date, as: :date, html5: true %>
+  <%= f.submit %>
+<% end %>
