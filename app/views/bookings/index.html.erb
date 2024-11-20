@@ -1,9 +1,14 @@
 <div class="container">
+  <h1>Your upcoming Bookings</h1>
+  <p>You have <%= @bookings.count %> upcoming walks!</p>
   <% @bookings.each do |booking| %>
-    <div class="card bg-white my-3 px-3 py-3">
-      <h2><%= booking.user.first_name%> <%= booking.user.last_name%> <%= booking.date%></h2>
-      <p><%= booking.dog.name %>, <%= booking.dog.age %> years old</p>
-      <p><%= booking.dog.description %></p>
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/dog.JPG" alt="lovely doggo">
+      <div class="card-body my-3 px-3 py-3">
+        <h5 class="card-title"><%= booking.date %></h2>
+        <p class="card-text">Going on a walk with: <%= booking.dog.name%></p>
+        <p class="card-text"><%= booking.dog.breed %></p>
+      </div>
     </div>
   <% end %>
 </div>
