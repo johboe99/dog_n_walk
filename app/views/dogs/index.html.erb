@@ -4,10 +4,8 @@
       <h2><%= dog.name%></h2>
       <p><%= dog.breed %>, <%= dog.age %> years old</p>
       <p><%= dog.description %></p>
-      <button class= "btn btn-primary mb-3">Go on a walk with me!</button>
+      <%= link_to 'Find out more!', dog, class: 'btn btn-primary' %>
     </div>
   <% end %>
 </div>
 
-
-# link to show page missing!
