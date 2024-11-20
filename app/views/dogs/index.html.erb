@@ -1,14 +1,21 @@
+<div class="container mt-5">
+  <div class="row mb-4">
+    <div class="col text-center">
+      <h1 class="display-4 fw-bold">Find your next Walking Buddy!</h1>
+      <p class="lead text-muted">Connect with a companion who complements your lifestyle and fits your preferences.</p>
+    </div>
+  </div>
+
 <div class="container">
   <% @dogs.each do |dog| %>
     <div class="dog-card bg-white my-3 d-flex">
       <img src="/assets/dog.JPG" class="img-fluid rounded-start" alt="picture of brown labrador retriever">
-      <div class="dog-card-body p-3">
-        <h5 class="card-title"><%= dog.name%></h5>
-        <p class="card-text"><%= dog.breed %>, <%= dog.age %> years old</p>
+      <div class="dog-card-body px-3 my-auto">
+        <h4 class="card-title mb-2"><%= dog.name%></h4>
+        <p class="card-text text-muted"><%= dog.breed %>, <%= dog.age %> years old</p>
         <p class="card-text"><%= dog.description %></p>
         <%= link_to 'Find out more!', dog, class: 'btn btn-primary' %>
       </div>
     </div>
   <% end %>
 </div>
-
