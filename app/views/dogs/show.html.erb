@@ -1,3 +1,13 @@
-<div class="container">
-  <h1><%= @dog.name %></h1>
+<div class = "container">
+<h1><%= @dog.name%></h1>
+<h3 class = "text-custom-gray" style= "color:#6c757d"><%= @dog.breed %></h3>
+<div class="card bg-white my-3 px-3 py-3">
+  <p class = "text-custom-gray" style= "color:#6c757d">Age</p>
+  <p><%= @dog.age %> years old</p>
+  <p class = "text-custom-gray" style= "color:#6c757d">Description</p>
+  <p><%= @dog.description %></p>
+  <button class = "btn btn-primary">Go on a walk with me!</button>
+</div>
+
+<%= link_to " Back to Home Page", dogs_path %>
 </div>
