@@ -27,12 +27,11 @@ class DogsController < ApplicationController
   def destroy
     @dog.destroy
     redirect_to dogs_path(@dog.all), status: :see_other
-    
   end
 
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :age, :breed, :description)
+    params.require(:dog).permit(:name, :age, :breed, :description, :photo)
   end
 end
