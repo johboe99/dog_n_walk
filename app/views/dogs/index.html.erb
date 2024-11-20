@@ -1,10 +1,19 @@
 <div class="container">
   <% @dogs.each do |dog| %>
     <div class="card bg-white my-3 px-3 py-3">
-      <h2><%= dog.name%></h2>
-      <p><%= dog.breed %>, <%= dog.age %> years old</p>
-      <p><%= dog.description %></p>
-      <%= link_to 'Find out more!', dog, class: 'btn btn-primary' %>
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="/assets/dog.JPG" class="img-fluid rounded-start" width= 100px alt="picture of brown labrador retriever">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= dog.name%></h5>
+            <p class="card-text"><%= dog.breed %>, <%= dog.age %> years old</p>
+            <p class="card-text"><%= dog.description %></p>
+            <%= link_to 'Find out more!', dog, class: 'btn btn-primary' %>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
