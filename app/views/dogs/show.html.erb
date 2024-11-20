@@ -1,7 +1,7 @@
 <div class = "container">
 <h1><%= @dog.name%></h1>
 <h3 class = "text-custom-gray" style= "color:#6c757d"><%= @dog.breed %></h3>
-<div class="card bg-white my-3 px-3 py-3">
+<div class="card bg-white my-3 px-3 py-3 d-flex">
   <p class = "text-custom-gray" style= "color:#6c757d">Age</p>
   <p><%= @dog.age %> years old</p>
   <p class = "text-custom-gray" style= "color:#6c757d">Description</p>
@@ -9,5 +9,8 @@
   <button class = "btn btn-primary">Go on a walk with me!</button>
 </div>
 
+<%= link_to " Delete this Dog",
+     dog_path(@dog),
+     data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
 <%= link_to " Back to Home Page", dogs_path %>
 </div>
