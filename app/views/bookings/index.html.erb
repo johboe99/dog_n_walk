@@ -1,6 +1,6 @@
-<div class="container">
-  <h1>Your upcoming Bookings</h1>
-  <p>You have <%= @bookings.count %> upcoming walks!</p>
+<div class="container mt-5">
+  <h1 class="display-4 fw-bold">Your upcoming walks</h1>
+  <p class="lead text-muted">You have <%= @bookings.count %> upcoming walks!</p>
   <% @bookings.each do |booking| %>
     <div class="card" style="width: 18rem;">
       <img src="/assets/dog.JPG" alt="lovely doggo">
