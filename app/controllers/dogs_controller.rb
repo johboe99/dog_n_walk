@@ -25,7 +25,9 @@ class DogsController < ApplicationController
   end
 
   def destroy
-
+    @dog.destroy
+    redirect_to dogs_path(@dog.all), status: :see_other
+    
   end
 
   private
