@@ -1,16 +1,27 @@
 <div class = "container">
   <div class="my-3">
-  <%= link_to dogs_path, class: 'btn btn-outline-primary' do %>
+  <%= link_to dogs_path, class: 'btn' do %>
     <i class="fa-solid fa-arrow-left-long"></i> Go back
   <% end %>
   </div>
-  <h1><%= @dog.name%></h1>
-  <h3 class = "text-custom-gray" style= "color:#6c757d"><%= @dog.breed %></h3>
-  <div class="card bg-white my-3 px-3 py-3">
-    <p class = "text-custom-gray" style= "color:#6c757d">Age</p>
-    <p><%= @dog.age %> years old</p>
-    <p class = "text-custom-gray" style= "color:#6c757d">Description</p>
-    <p><%= @dog.description %></p>
-  <%= link_to "Go on a walk with me!", new_dog_booking_path(@dog), class: 'btn btn-primary' %>
+</div>
+
+<div class = "container d-flex justify-content-center align-items-center">
+  <div class="dog-show d-flex justify-content-center align-items-center">
+      <div class="row w-100">
+        <div class="dog-show-container mx-auto" style="max-width: 600px;">
+          <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-circle mb-3">
+          <h1 class="text-center"><%= @dog.name %></h1>
+          <h4 class="text-custom-gray text-center" style="color: #6c757d;"><%= @dog.breed %></h4>
+
+          <div class="dog-info bg-light my-3 p-4 rounded">
+            <h3 class="text-custom-gray" style="color: #2E2D2D;">Age</h3>
+            <p><%= @dog.age %> years old</p>
+            <h3 class="text-custom-gray" style="color: #2E2D2D;">Description</h3>
+            <p><%= @dog.description %></p>
+            <%= link_to "Go on a walk with me!", new_dog_booking_path(@dog), class: 'btn' %>
+          </div>
+        </div>
+      </div>
   </div>
 </div>

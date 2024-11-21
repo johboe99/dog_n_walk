@@ -1,0 +1,15 @@
+.btn {
+  /*shape and space*/
+  border-radius: 40px;
+  background-color: #1A5422;
+  color: #DBE9DD;
+  padding: 10px 15px;
+  /*text-style*/
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: regular;
+  &:hover {
+    color: #1A5422;
+    background-color: #DBE9DD;
+  }
+}
