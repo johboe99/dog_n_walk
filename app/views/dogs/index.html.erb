@@ -15,7 +15,7 @@
         <div class="dog-card-body px-3 my-auto">
           <h4 class="card-title mb-2"><%= dog.name%></h4>
           <p class="card-text text-muted"><%= dog.breed %>, <%= dog.age %> years old</p>
-          <p class="card-text"><%= dog.description %></p>
+          <p class="card-text"><%= truncate dog.description, length: 85 %></p>
           <%= link_to 'Find out more!', dog, class: 'btn' %>
         </div>
       </div>
