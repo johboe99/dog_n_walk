@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
+    @dogs = @user.dogs.all
 
   end
 end
