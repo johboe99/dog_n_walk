@@ -1,10 +1,11 @@
 .profile-container {
   background-color: #fff;
-  border: 1px solid #ccc;
   padding: 20px;
   max-width: 400px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .profile-container img {
@@ -16,20 +17,21 @@
 }
 
 .profile-container h2 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 5px;
 }
 
 .info h2 {
-  font-size: 22px;
-  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 
-
 .profile-container p {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 12px;
 }
 
 .profile-container .info {
@@ -41,11 +43,10 @@
   margin-bottom: 15px;
 }
 
-.profile-container .info span {
-  display: inline-block;
+.profile-container h3 {
+  font-size: 24px;
   font-weight: bold;
-  color: #333;
-  width: 100px;
+  margin: 0;
 }
 
 .profile-container .info .value {

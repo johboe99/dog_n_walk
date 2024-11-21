@@ -10,18 +10,18 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="row w-100">
     <h2 class="mb-2 mx-auto" style="max-width: 800px;">User details</h2>
-    <div class="profile-container mx-auto mb-5" style="max-width: 800px;">
+    <div class="dog-info profile-container mx-auto mb-5" style="max-width: 800px;">
       <div class="info">
           <div>
-            <span>First Name:</span>
+            <h3>First Name</h3>
             <p><%= current_user.first_name %></p>
           </div>
           <div>
-            <span>Last Name:</span>
+            <h3>Last Name</h3>
             <p><%= current_user.last_name %></p>
           </div>
           <div>
-            <span>Email:</span>
+            <h3>Email</h3>
             <p><%= current_user.email %></p>
           </div>
       </div>
@@ -36,15 +36,15 @@
       <div class="profile-container mx-auto mb-3" style="max-width: 800px;">
         <div class="info">
               <div>
-                <span>Name:</span>
+                <h3>Name</h3>
                 <p><%= dog.name %></p>
               </div>
               <div>
-                <span>Breed:</span>
+                <h3>Breed</h3>
                 <p><%= dog.breed %></p>
               </div>
               <div>
-                <span>Age:</span>
+                <h3>Age</h3>
                 <p><%= dog.age %></p>
               </div>
           </div>
