@@ -1,12 +1,13 @@
-<div class = "container">
-<h1><%= @dog.name%></h1>
+<div class = "container ">
 <h3 class = "text-custom-gray" style= "color:#6c757d"><%= @dog.breed %></h3>
-<div class="card bg-white my-3 px-3 py-3">
-  <p class = "text-custom-gray" style= "color:#6c757d">Age</p>
-  <p><%= @dog.age %> years old</p>
-  <p class = "text-custom-gray" style= "color:#6c757d">Description</p>
+<div class="dog-card bg-white my-3 d-flex">
+ <%= cl_image_tag @dog.photo.key, height: 200, width: 200, crop: :fill %>
+ <div class="dog-card-body px-3 my-3">
+  <h1><%= @dog.name%></h1>
+  <p class = "text-custom-gray" style= "color:#6c757d">Age : <%= @dog.age %> years old</p>
+  <p class = "text-custom-gray" style= "color:#6c757d">Description : </p>
   <p><%= @dog.description %></p>
- <%= link_to "Go on a walk with me!", new_dog_booking_path(@dog), class: 'btn btn-primary' %>
+  <%= link_to "Go on a walk with me!", new_dog_booking_path(@dog), class: 'btn btn-primary' %>
+  </div>
 </div>
-
 </div>

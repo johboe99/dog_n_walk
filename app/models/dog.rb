@@ -6,4 +6,5 @@ class Dog < ApplicationRecord
   validates :age, presence: true
   validates :description, presence: true, length: { minimum: 5 }
   validates :name, presence: true
+  # validates :photo, attached: true, content_type: [:jpg, :png]
 end
