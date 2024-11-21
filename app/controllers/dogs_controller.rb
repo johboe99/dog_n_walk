@@ -14,7 +14,7 @@ class DogsController < ApplicationController
     @user = current_user.id
     @dog.user_id = @user
     if @dog.save
-      redirect_to dogs_path, notice: "Dog was successfully created."
+      redirect_to dog_path(@dog), notice: "Dog was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
