@@ -10,7 +10,7 @@
   <div class="dog-show d-flex justify-content-center align-items-center">
       <div class="row w-100">
         <div class="dog-show-container mx-auto" style="max-width: 600px;">
-          <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-circle mb-3">
+          <%= cl_image_tag @dog.photo.key, height: 200, width: 200, crop: :fill %>
           <h1 class="text-center"><%= @dog.name %></h1>
           <h4 class="text-custom-gray text-center" style="color: #6c757d;"><%= @dog.breed %></h4>
 
