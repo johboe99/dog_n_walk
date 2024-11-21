@@ -3,6 +3,14 @@ class DogsController < ApplicationController
 
   def index
     @dogs = Dog.all
+
+    @markers = @dogs.geocoded.map do |dog|
+      {
+        lat: dog.latitude,
+        lng: dog.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {dog: dog})
+      }
+    end
   end
 
   def new
@@ -14,7 +22,7 @@ class DogsController < ApplicationController
     @user = current_user.id
     @dog.user_id = @user
     if @dog.save
-      redirect_to dogs_path, notice: "Dog was successfully created."
+      redirect_to dog_path(@dog), notice: "Dog was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -32,6 +40,6 @@ class DogsController < ApplicationController
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :age, :breed, :description, :photo)
+    params.require(:dog).permit(:name, :age, :breed, :description, :photo, :address)
   end
 end

@@ -7,15 +7,24 @@
   </div>
 
 <div class="container">
-  <% @dogs.each do |dog| %>
-    <div class="dog-card bg-white my-3 d-flex">
-      <%= cl_image_tag dog.photo.key, height: 200, width: 200, crop: :fill  %>
-      <div class="dog-card-body px-3 my-auto">
-        <h4 class="card-title mb-2"><%= dog.name%></h4>
-        <p class="card-text text-muted"><%= dog.breed %>, <%= dog.age %> years old</p>
-        <p class="card-text"><%= dog.description %></p>
-        <%= link_to 'Find out more!', dog, class: 'btn btn-primary' %>
+  <div class="row">
+    <div class="col">
+    <% @dogs.each do |dog| %>
+      <div class="dog-card bg-white my-3 d-flex">
+        <%= cl_image_tag dog.photo.key, height: 200, width: 200, crop: :fill  %>
+        <div class="dog-card-body px-3 my-auto">
+          <h4 class="card-title mb-2"><%= dog.name%></h4>
+          <p class="card-text text-muted"><%= dog.breed %>, <%= dog.age %> years old</p>
+          <p class="card-text"><%= dog.description %></p>
+          <%= link_to 'Find out more!', dog, class: 'btn' %>
+        </div>
       </div>
+    <% end %>
     </div>
-  <% end %>
+    <div style="width: 100%; height: 600px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" class="col sticky-top my-3 d-flex">
+    </div>
+  </div>
 </div>
