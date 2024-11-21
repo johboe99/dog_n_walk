@@ -1,7 +1,6 @@
 .profile-container {
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 10px;
   padding: 20px;
   max-width: 400px;
   text-align: center;
@@ -20,6 +19,12 @@
   font-size: 22px;
   margin-bottom: 5px;
 }
+
+.info h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
 
 .profile-container p {
   font-size: 14px;
