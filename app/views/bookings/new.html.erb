@@ -1,6 +1,15 @@
-<h1>When will you take this Dog on a walk?</h1>
+<div class="container mt-5">
+  <div class="row mb-4">
+    <div class="col text-center">
+      <h3 class="display-4 fw-bold">When will you take this Dog on a walk?</h3>
+      <p class="lead text-muted">Simply select a date and time, then confirm your booking!</p>
+    </div>
+  </div>
 
-<%= simple_form_for([@dog, @booking]) do |f| %>
-  <%= f.input :date, as: :date, html5: true %>
-  <%= f.submit %>
-<% end %>
+<div class="card bg-white my-3 px-3 py-3">
+  <%= simple_form_for([@dog, @booking]) do |f| %>
+    <%= f.input :date, as: :date, html5: true %>
+    <%= f.input :time, as: :time, html5: true %>
+    <%= f.button :submit, "Confirm Booking", class: "btn" %>
+  <% end %>
+</div>
