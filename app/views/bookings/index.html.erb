@@ -1,16 +1,28 @@
-<div class="container">
+<div class="container mt-5">
+  <div class="row mb-4">
+    <div class="col text-center">
+      <h1 class="display-4 fw-bold">Your upcoming walks</h1>
+      <p class="lead text-muted">You have <%= @bookings.count %> upcoming walks! 🎉</p>
+    </div>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center">
   <div class="row">
-    <h1 class="display-4 fw-bold">Your upcoming walks</h1>
-    <p class="lead text-muted">You have <%= @bookings.count %> upcoming walks!</p>
+    <div class="col">
     <% @bookings.each do |booking| %>
       <div class="dog-card bg-white my-3 d-flex">
-        <img src="/assets/dog.JPG" alt="lovely doggo">
+        <%= cl_image_tag booking.dog.photo.key, height: 300, width: 300, crop: :fill %>
         <div class="dog-card-body px-3 my-auto">
-          <h3 class="card-title"><%= booking.date %></h2>
-          <p class="card-text">Going on a walk with: <%= booking.dog.name%></p>
-          <p class="card-text"><%= booking.dog.breed %></p>
+          <h5 class="mb-2"> 📆 <%= booking.date.strftime("%A, %b %d") %> at <%= booking.time.strftime("%H:%M %p") %></h5>
+          <p class="card-text">Going on a walk with:</p>
+          <h4 class="card-title"><%= booking.dog.name %></h4>
+          <p class="card-text text-muted"><%= booking.dog.breed %>, <%= booking.dog.age %> years old</p>
+          <p class="card-text"><%= truncate(booking.dog.description, length: 85) %></p>
+          <%= link_to 'Find out more!', booking.dog, class: 'btn' %>
         </div>
       </div>
     <% end %>
+  </div>
   </div>
 </div>
