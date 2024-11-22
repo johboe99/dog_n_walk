@@ -6,11 +6,11 @@
   </div>
 </div>
 
-<div class = "container d-flex justify-content-center align-items-center">
+<div class="container d-flex justify-content-center align-items-center">
   <div class="dog-show d-flex justify-content-center align-items-center">
-      <div class="row w-100">
-        <div class="dog-show-container mx-auto" style="max-width: 600px;">
-          <%= cl_image_tag @dog.photo.key, class: "avatar-large" %>
+    <div class="row w-100">
+      <div class="dog-show-container mx-auto" style="max-width: 600px;">
+        <%= cl_image_tag @dog.photo.key, class: "avatar-dog" %>
           <h1 class="text-center"><%= @dog.name %></h1>
           <h4 class="text-custom-gray text-center" style="color: #6c757d;"><%= @dog.breed %></h4>
 

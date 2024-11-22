@@ -9,6 +9,9 @@
   font-size: 16px;
   text-decoration: none;
   font-weight: regular;
+  /*other styles*/
+  cursor: pointer;
+  display: inline-block;
   &:hover {
     color: #1A5422;
     background-color: #DBE9DD;
@@ -41,6 +44,7 @@
   font-size: 16px;
   text-decoration: none;
   font-weight: regular;
+  cursor: pointer;
   &:hover {
     color: #AE101B;
     background-color: #FBF2F3;

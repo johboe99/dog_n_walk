@@ -43,6 +43,17 @@
   white-space: nowrap;
 }
 
+.container.mapbox p {
+  font-size: 14px;
+  font-family: nunito;
+  color: #47494b
+}
+
+.container.mapbox .btn {
+  font-size: 16px;
+  font-family: nunito;
+}
+
 .dog-card p {
   font-size: 16px;
   line-height: 1.4;
@@ -51,8 +62,6 @@
 }
 
 .dog-show {
-  border-radius: 10px;
-  display: flex;
   margin-bottom: 12px;
   margin-top: 12px;
 }
@@ -64,7 +73,6 @@
 
 .dog-show-container {
   text-align: center;
-  border-radius: 10px;
 }
 
 .dog-info {
