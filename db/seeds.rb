@@ -57,3 +57,8 @@ dog_5 = Dog.create(name: "Phteven", breed: "Chihuahua-Dachshound", age: 3, descr
 file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732184045/Tuna-the-dog-Phteven-meme-avy8a_vffdot.jpg")
 dog_5.photo.attach(io: file, filename: "Phteven.jpg", content_type: "image/jpg")
 puts "dog 5 created"
+
+dog_6 = Dog.create(name: "Momo", breed: "Bobtail", age: 3, description: "Hi, I am Momo, a playful bobtail from Switzerland. I love to walk and wear cute hats.", user: user_1, address: "Tieckstrasse 35, 10115 Berlin")
+file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732274859/af9a565e-dee1-42a6-a5ea-f97f1ef8d973_pt5xhr.jpg")
+dog_6.photo.attach(io: file, filename: "Momo.jpg", content_type: "image/jpg")
+puts "dog 6 created"
