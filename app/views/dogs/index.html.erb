@@ -11,7 +11,7 @@
     <div class="col">
     <% @dogs.each do |dog| %>
       <div class="dog-card bg-white my-3 d-flex">
-        <%= cl_image_tag dog.photo.key, height: 200, width: 200, crop: :fill  %>
+        <%= cl_image_tag dog.photo.key, height: 250, width: 250, crop: :fill  %>
         <div class="dog-card-body px-3 my-auto">
           <h4 class="card-title mb-2"><%= dog.name%></h4>
           <p class="card-text text-muted"><%= dog.breed %>, <%= dog.age %> years old</p>
