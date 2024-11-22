@@ -15,6 +15,21 @@
   }
 }
 
+.btn-light {
+  /*shape and space*/
+  border-radius: 40px;
+  background-color: #DBE9DD;
+  color: #1A5422;
+  padding: 10px 15px;
+  /*text-style*/
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: regular;
+  &:hover {
+    color: #DBE9DD;
+    background-color: #1A5422;
+  }
+
 .delete_btn {
   /*shape and space*/
   border-radius: 40px;
@@ -29,4 +44,3 @@
     color: #AE101B;
     background-color: #FBF2F3;
   }
-}
