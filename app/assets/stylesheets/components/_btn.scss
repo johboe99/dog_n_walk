@@ -13,3 +13,19 @@
     background-color: #DBE9DD;
   }
 }
+
+.btn-light {
+  /*shape and space*/
+  border-radius: 40px;
+  background-color: #DBE9DD;
+  color: #1A5422;
+  padding: 10px 15px;
+  /*text-style*/
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: regular;
+  &:hover {
+    color: #DBE9DD;
+    background-color: #1A5422;
+  }
+}
