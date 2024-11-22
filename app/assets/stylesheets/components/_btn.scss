@@ -4,6 +4,7 @@
   background-color: #1A5422;
   color: #DBE9DD;
   padding: 10px 15px;
+  cursor: pointer;
   /*text-style*/
   font-size: 16px;
   text-decoration: none;
@@ -28,4 +29,18 @@
     color: #DBE9DD;
     background-color: #1A5422;
   }
-}
+
+.delete_btn {
+  /*shape and space*/
+  border-radius: 40px;
+  background-color: #AE101B;
+  color: #FBF2F3;
+  padding: 10px 15px;
+  /*text-style*/
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: regular;
+  &:hover {
+    color: #AE101B;
+    background-color: #FBF2F3;
+  }

@@ -4,15 +4,45 @@
   display: flex;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
 }
 .dog-card-body {
   box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
+
+.dog-card img {
+  object-fit: cover;
+}
+
 .dog-card .card-title {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
+
+.dog-card-body h5 {
+  background-color: #DBE9DD;
+  border-radius: 3px;
+  border: 1px solid #B5D2B9;
+  box-sizing: border-box;
+  color: #1A5422;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: regular;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
 .dog-card p {
   font-size: 16px;
   line-height: 1.4;

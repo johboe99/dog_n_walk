@@ -33,8 +33,10 @@ class DogsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
+    @dog = @user.dogs.find(params[:id])
     @dog.destroy
-    redirect_to dogs_path(@dog.all), status: :see_other
+    redirect_to profile_path, status: :see_other
   end
 
   private

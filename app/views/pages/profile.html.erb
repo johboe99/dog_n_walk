@@ -10,7 +10,7 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="row w-100">
     <h2 class="mb-2 mx-auto" style="max-width: 800px;">User details</h2>
-    <div class="dog-info profile-container mx-auto mb-5" style="max-width: 800px;">
+    <div class="dog-info profile-container mx-auto mb-5">
       <div class="info">
           <div>
             <h3>First Name</h3>
@@ -29,26 +29,21 @@
   </div>
 
 
-<div class="d-flex justify-content-center align-items-center">
-  <div class="row w-100">
-  <h2 class="mb-2 mx-auto" style="max-width: 800px;">Dog details</h2>
-    <% @dogs.each do |dog| %>
-      <div class="profile-container mx-auto mb-3" style="max-width: 800px;">
-        <div class="info">
-              <div>
-                <h3>Name</h3>
-                <p><%= dog.name %></p>
-              </div>
-              <div>
-                <h3>Breed</h3>
-                <p><%= dog.breed %></p>
-              </div>
-              <div>
-                <h3>Age</h3>
-                <p><%= dog.age %></p>
-              </div>
+<% if @dogs.present? %>
+  <div class="row">
+    <div class="col">
+      <h2 class="mb-2 mx-auto" style="max-width: 800px;">Dog details</h2>
+        <% @dogs.each do |dog| %>
+          <div class="dog-card bg-white my-3 d-flex mx-auto" style="max-width: 800px;">
+            <%= cl_image_tag dog.photo.key, height: 200, width: 200, crop: :fill  %>
+            <div class="dog-card-body px-3 my-auto">
+              <h4 class="card-title mb-2"><%= dog.name%></h4>
+              <p class="card-text text-muted"><%= dog.breed %>, <%= dog.age %> years old</p>
+              <p class="card-text"><%= truncate dog.description, length: 85 %></p>
+              <%= link_to " Delete this Dog", dog, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'delete_btn' %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+    </div>
   </div>
-</div>
+<% end %>
