@@ -10,13 +10,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <%= render "shared/navbar" %>
     <%= yield %>
     <%= render "shared/flashes" %>
-
-    <footer class="text-center py-3 border-top">
-    &copy; <%= Time.now.year %> DogNWalk. All rights reserved.
+    <footer class="text-center py-3 border-top mt-auto">
+      &copy; <%= Time.now.year %> DogNWalk. All rights reserved.
     </footer>
   </body>
 </html>

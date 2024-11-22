@@ -6,7 +6,6 @@
     </div>
   </div>
 
-<div class="container">
   <div class="row">
     <div class="col">
     <% @dogs.each do |dog| %>
@@ -18,13 +17,14 @@
           <p class="card-text"><%= truncate dog.description, length: 85 %></p>
           <%= link_to 'Find out more!', dog, class: 'btn' %>
         </div>
+      <% end %>
+    </div>
+    <div class="col-sm-6">
+      <div style="width: 100%; height: 600px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" class="col sticky-top my-3 d-flex">
       </div>
-    <% end %>
-    </div>
-    <div style="width: 100%; height: 600px;"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" class="col sticky-top my-3 d-flex">
-    </div>
+      </div>
   </div>
 </div>
