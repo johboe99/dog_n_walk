@@ -33,8 +33,6 @@ file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732195307/A
 user_4.photo.attach(io: file, filename: "Anik.jpg", content_type: "image/jpg")
 puts "user 4 created"
 
-
-
 dog_1 = Dog.create(name: "Romy", breed: "Labrador Retriever", age: 5, description: "Hi, I am Romy, a friendly, young Lady from Hamburg. I love long walks, sticks and carrots and anyone with food.", user: user_1, address: "Kastanienallee 82, 10435 Berlin")
 file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732184045/dae9ab20-8efa-48b6-b93e-cd31bc37b5bb_bkxzac.jpg")
 dog_1.photo.attach(io: file, filename: "Romy.jpg", content_type: "image/jpg")

@@ -14,7 +14,7 @@
       <div class="dog-card bg-white my-3 d-flex">
         <%= cl_image_tag booking.dog.photo.key, height: 300, width: 300, crop: :fill %>
         <div class="dog-card-body px-3 my-auto">
-          <h5 class="mb-2"> 📆 <%= booking.date %></h5>
+          <h5 class="mb-2"> 📆 <%= booking.date.strftime("%A, %b %d") %> at <%= booking.time.strftime("%H:%M %p") %></h5>
           <p class="card-text">Going on a walk with:</p>
           <h4 class="card-title"><%= booking.dog.name %></h4>
           <p class="card-text text-muted"><%= booking.dog.breed %>, <%= booking.dog.age %> years old</p>
