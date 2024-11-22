@@ -13,7 +13,7 @@ Booking.destroy_all
 Dog.destroy_all
 User.destroy_all
 
-user_1 = User.create(first_name: "Katharina", last_name: "Döhle", email: "katha@döhle.com", password: "123456", description: "I am the owner of precious Romy.")
+user_1 = User.create(first_name: "Katharina", last_name: "Döhle", email: "katha@doehle.com", password: "123456", description: "I am the owner of precious Romy.")
 file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732195306/Katha_pic_zfev1d.jpg")
 user_1.photo.attach(io: file, filename: "katharina.jpg", content_type: "image/jpg")
 puts "user 1 created"
@@ -23,7 +23,7 @@ file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732195306/L
 user_2.photo.attach(io: file, filename: "lucas.jpg", content_type: "image/jpg")
 puts "user 2 created"
 
-user_3 = User.create(first_name: "Johannes", last_name: "Böhmer", email: "johannes@böhmer.com", password: "123456", description: "I am the owner of the giant Rudi.")
+user_3 = User.create(first_name: "Johannes", last_name: "Böhmer", email: "johannes@boehmer.com", password: "123456", description: "I am the owner of the giant Rudi.")
 file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732195306/Joh_pic_qv8qqr.jpg")
 user_3.photo.attach(io: file, filename: "johannes.jpg", content_type: "image/jpg")
 puts "user 3 created"

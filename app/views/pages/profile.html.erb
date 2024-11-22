@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="row w-100">
     <div class="text-center mx-auto my-5" style="max-width: 800px;">
-      <img src="https://via.placeholder.com/100" alt="Profile Picture">
+      <%= cl_image_tag current_user.photo.key, height: 200, width: 200, crop: :fill, style: "border-radius: 50%; border: 1px solid black; margin: 10px;"   %>
       <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
       <p><%= current_user.email %></p>
     </div></div>
