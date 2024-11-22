@@ -28,7 +28,7 @@ file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732195306/J
 user_3.photo.attach(io: file, filename: "johannes.jpg", content_type: "image/jpg")
 puts "user 3 created"
 
-user_4 = User.create(first_name: "Anik", last_name: "Van_Eester", email: "anik@vaneester.com", password: "123456", description: "I am looking to walk a dog in Berlin.")
+user_4 = User.create(first_name: "Anik", last_name: "Van Eester", email: "anik@vaneester.com", password: "123456", description: "I am looking to walk a dog in Berlin.")
 file = URI.open("https://res.cloudinary.com/dsrno7wgu/image/upload/v1732195307/Anik_pic_alk98g.jpg")
 user_4.photo.attach(io: file, filename: "Anik.jpg", content_type: "image/jpg")
 puts "user 4 created"
