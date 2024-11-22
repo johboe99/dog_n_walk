@@ -14,3 +14,19 @@
     background-color: #DBE9DD;
   }
 }
+
+.delete_btn {
+  /*shape and space*/
+  border-radius: 40px;
+  background-color: #AE101B;
+  color: #FBF2F3;
+  padding: 10px 15px;
+  /*text-style*/
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: regular;
+  &:hover {
+    color: #AE101B;
+    background-color: #FBF2F3;
+  }
+}
