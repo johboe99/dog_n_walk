@@ -10,11 +10,11 @@
   <div class="dog-show d-flex justify-content-center align-items-center">
       <div class="row w-100">
         <div class="dog-show-container mx-auto" style="max-width: 600px;">
-          <%= cl_image_tag @dog.photo.key, height: 200, width: 200, crop: :fill %>
+          <%= cl_image_tag @dog.photo.key, class: "avatar-large" %>
           <h1 class="text-center"><%= @dog.name %></h1>
           <h4 class="text-custom-gray text-center" style="color: #6c757d;"><%= @dog.breed %></h4>
 
-          <div class="dog-info bg-light my-3 p-4 rounded">
+          <div class="dog-info bg-light my-3 p-4">
             <h3 class="text-custom-gray" style="color: #2E2D2D;">Age</h3>
             <p><%= @dog.age %> years old</p>
             <h3 class="text-custom-gray" style="color: #2E2D2D;">Description</h3>
