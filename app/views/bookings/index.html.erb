@@ -1,14 +1,15 @@
-<div class="container mt-5">
-  <h1 class="display-4 fw-bold">Your upcoming walks</h1>
-  <p class="lead text-muted">You have <%= @bookings.count %> upcoming walks!</p>
-  <% @bookings.each do |booking| %>
-    <div class="card" style="width: 18rem;">
-      <img src="/assets/dog.JPG" alt="lovely doggo">
-      <div class="card-body my-3 px-3 py-3">
-        <h5 class="card-title"><%= booking.date %></h2>
-        <p class="card-text">Going on a walk with: <%= booking.dog.name%></p>
-        <p class="card-text"><%= booking.dog.breed %></p>
-      </div>
-    </div>
+<div class="container">
+  <div class="row">
+    <h1 class="display-4 fw-bold">Your upcoming walks</h1>
+    <p class="lead text-muted">You have <%= @bookings.count %> upcoming walks!</p>
+    <% @bookings.each do |booking| %>
+      <div class="dog-card bg-white my-3 d-flex">
+        <img src="/assets/dog.JPG" alt="lovely doggo">
+        <div class="dog-card-body px-3 my-auto">
+          <h3 class="card-title"><%= booking.date %></h2>
+          <p class="card-text">Going on a walk with: <%= booking.dog.name%></p>
+          <p class="card-text"><%= booking.dog.breed %></p>
+      </div></div>
+     </div>
   <% end %>
 </div>
